@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!-- for azure:  all these links must use https, not http -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>My First jQuery Mobile Application</title>
+
+   <link rel="stylesheet" href="stylesheets/acnh.min.css" />
+
+   <link rel="stylesheet" href="stylesheets/jquery.mobile.icons.min.css" />
+   <link rel="stylesheet" href="stylesheets/style.css" />
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+   //*********************************************************
+   //*********************************************************
+   <div data-role="page" id="Home">
+
+      <div data-role="header" data-theme='a'>
+         <h1>Animal Crossing App</h1>
+         <div data-role="navbar">
+            <ul>
+               <li><a href="#Show" data-icon="star">Inventory</a> </li>
+               <li><a href="#AddDelete" data-icon="plus">Edit your Inventory</a> </li>
+            </ul>
+         </div><!-- /navbar -->
+      </div>
+
+      <div data-role="content" data-theme='a'>
+         <h2>Nooks Cranny</h2>
+         <p>This app lets you create an inventory with as many items as you would like and sells it to Nooks Cranny! To
+            get started, select "Edit Inventory". </p>
+
+
+      </div>
+
+      <div data-role="footer" data-theme='a'>
+         <h1>Copywrite Ivy 2020</h1>
+      </div>
+
+   </div>
+   //*********************************************************
+   //*********************************************************
+   <div data-role="page" id="Show">
+
+      <div data-role="header" data-theme='a'>
+         <h1>Animal Crossing App</h1>
+         <div data-role="navbar">
+            <ul>
+               <li><a href="#Home" data-icon="home">Home Page</a></li>
+               <li><a href="#AddDelete" data-icon="plus">Edit Inventory</a> </li>
+            </ul>
+         </div><!-- /navbar -->
+      </div>
+
+      <div data-role="content" data-theme='a'>
+         <h2>My Inventory</h2>
+         <div>
+            <ul id="listUl">
+
+            </ul>
+
+            <input type="button" onclick="location.href='#Details'" value="Sell" />
+
+
+         </div>
+      </div>
+
+      <div data-role="footer" data-theme='a'>
+         <h1>Copywrite Ivy 2020</h1>
+      </div>
+
+   </div>
+
+   <div data-role="page" id="AddDelete">
+
+      <div data-role="header" data-theme='a'>
+         <h1>Animal Crossing App</h1>
+         <div data-role="navbar">
+            <ul>
+               <li><a href="#Home" data-icon="home">Home Page</a></li>
+               <li><a href="#Show" data-icon="star">Show Inventory</a> </li>
+            </ul>
+         </div><!-- /navbar -->
+      </div>
+
+
+      <div data-role="content" data-theme='a'>
+         <h3>Add a new item here</h3>
+       
+
+
+         <select id="invItems">
+            <option value="Weeds">Weeds (10 bells)</option>
+            <option value="Tree Branch">Tree Branch (5 bells)</option>
+            <option value="woodchoice">Wood</option>
+            <option value="bambooPiece">Bamboo</option>
+            <option value="Stone">Stone(75 bells)</option>
+            <option value="Iron">Iron Nugget (75 bells)</option>
+            <option value="Gold">Gold Nugget(10,000 bells)</option>
+            <option value="Clay">Clay(100 bells)</option>
+            <option value="starFragchoice">Star Fragment</option>
+            <option value="Wasp Nest">Wasp Nest(300 bells)</option>
+            <option value="eggsType">Egg</option>
+            <option value="Apple">Apple (100 bells)</option>
+            <option value="Cherry">Cherry (100 bells)</option>
+            <option value="Orange">Orange (100 bells)</option>
+            <option value="Peach">Peach (100 bells)</option>
+            <option value="Coconut">Coconut(250 bells)</option>
+            <option value="Conch">Conch (700 bells)</option>
+            <option value="Cowerie">Cowerie (60 bells)</option>
+            <option value="Giant Clam">Giant Clam (900 bells)</option>
+            <option value="Sand Dollar">Sand Dollar (120 bells)</option>
+            <option value="Sea Snail">Sea Snail (180 bells)</option>
+            <option value="Manilla Clam">Manilla Clam (60 bells)</option>
+            <option value="Venus Comb">Venus Comb (300 bells)</option>
+            <option value="SummerShell">Summer Shell(600 bells)</option>
+            <option value="Empty Can">Empty Can (10 bells)</option>
+            <option value="Boot">Boot (10 bells)</option>
+            <option value="Old Tire">Old Tire (10 bells)</option>
+            <option value="Rusted Part">Rusted Part (10 bells)</option>
+            <option value="Acorn">Acorn (200 bells)</option>
+            <option value="Pinecone">Pinecone (200 bells)</option>
+            <option value="Maple Leaf">Maple Leaf (200 bells)</option>
+            <option value="Snowflake">Snowflake (200 bells)</option>
+            <option value="Blue Ornament">Blue Ornament (50 bells)</option>
+            <option value="Gold Ornament">Gold Ornament (50 bells)</option>
+            <option value="Red Ornament">Red Ornament (50 bells)</option>
+         </select>
+         <section id=starfrags>
+            <select id="starfragtype">
+               <option value="Star Fragment">Star Fragment (250 bells)</option>
+               <option value="Large Star Fragment">Large Star Fragment (2,500 bells)</option>
+               <option value="Aquarius Fragment">Aquarius Star Fragment (500 bells)</option>
+               <option value="Pisces Fragment">Piseces Star Fragment (500 bells)</option>
+               <option value="Tarus Fragment">Tarus Star Fragment (500 bells)</option>
+               <option value="Aries Fragment">Aries Star Fragment (500 bells)</option>
+               <option value="Gemini Fragment">Gemini Star Fragment (500 bells)</option>
+               <option value="Cancer Fragment">Cancer Star Fragment (500 bells)</option>
+               <option value="Leo Fragment">Leo Star Fragment (500 bells)</option>
+               <option value="Virgo Fragment">Libra Star Fragment (500 bells)</option>
+               <option value="Scorpio Fragment">Scorpio Star Fragment (500 bells)</option>
+               <option value="Capricorn Fragment">Capricorn Star Fragment (500 bells)</option>
+               <option value="Sagittarius Fragment">Sagittarius Star Fragment (500 bells)</option>
+
+            </select>
+         </section>
+         <section id="woods">
+            <select id="woodtype">
+               <option value="Wood">Wood (60 bells)</option>
+               <option value="Soft Wood">Soft Wood (60 bells)</option>
+               <option value="Hard_Wood">Hard Wood (60 bells)</option>
+            </select>
+         </section>
+         <section id="bamboos">
+            <select id="bambootype">
+               <option value="Bamboo">Bamboo (80 bells)</option>
+               <option value="Bamboo Shoot">Bamboo Shoot (250 bells)</option>
+               <option value="Spring Bamboo">Young Spring Bamboo (200 bells)</option>
+            </select>
+         </section>
+         <section id="eggtype">
+            <select id="eggs">
+               <option value="Sky Egg (200 bells)">Sky Egg</option>
+               <option value="Water Egg (200 bells)">Water Egg</option>
+               <option value="Leaf Egg (200 bells)">Leaf Egg</option>
+               <option value="Stone Egg (200 bells)">Stone Egg</option>
+               <option value="Earth Egg (200 bells)">Earth Egg</option>
+               <option value="Wood Egg (200 bells)">Wood Egg</option>
+            </select>
+         </section>
+
+
+
+         Enter how many you would like to add:
+         <input type="text" id="count">
+         Enter the price:  There is a cheat sheet that tells you how much 1 item costs
+         <input type="text" id="price">
+        
+
+         <button id="addButton">Add!</button>
+
+
+         <h3>Delete your inventory</h3>
+         <p>Enter the ID number of the item you would like to delete</p>
+         <input type="text" id="deleteID">
+
+         <button id="buttonDelete">Delete</button>
+      </div>
+      <div data-role="footer" data-theme='a'>
+         <h1>Copywrite Ivy 2020</h1>
+      </div>
+
+   </div>
+
+
+   //*********************************************************
+   //*********************************************************
+
+   <!-- // this page should be hidden until the user selects the "add inventory" on the show inventory page-->
+
+   <div data-role="page" id="Details">
+
+      <div data-role="header" data-theme='a'>
+         <h1>Animal Crossing App</h1>
+         <div data-role="navbar">
+            <ul>
+               <li><a href="#Home" data-icon="home">Home Page</a></li>
+               <li><a href="#Show" data-icon="star">Show Inventory</a> </li>
+               <li><a href="#AddDelete" data-icon="plus">Edit Inventory</a> </li>
+            </ul>
+         </div><!-- /navbar -->
+      </div>
+
+      <div data-role="content" data-theme='a'>
+         <h2>
+            <p id=totalPrice></p>
+         </h2>
+         <div>
+            <script src="javascripts/main.js"></script>
+         </div>
+
+
+      </div>
+
+      <div data-role="footer" data-theme='a'>
+         <h1>Copywrite Ivy 2020</h1>
+      </div>
+
+   </div>
+
+
+</body>
+
+</html>
